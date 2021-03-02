@@ -58,7 +58,7 @@ You'll be working with the following:
 
 - **Code to be graded.** Once all tests pass, submit `assignment.py` to the autograder. This will be the basis for grading your code.
 
-- **Analysis to be graded.** For the analysis part of the assignment, look at the output of `assignment.py` and submit a brief but clear written response as PDF.  (Note that, particularly if you are not very familiar with U.S. politics, you are welcome to discuss the data you're looking at with other other people -- as long as you state explicitly in your writeup that you have done so, and of course you need to write your answers in your own words.)
+- **Analysis to be graded.** For the analysis part of the assignment, look at the output of `assignment.py` and submit a brief but clear written response in a PDF file, named `writeup.pdf`.  (Note that, particularly if you are not very familiar with U.S. politics, you are welcome to discuss the data you're looking at with other other people -- as long as you state explicitly in your writeup that you have done so, and of course you need to write your answers in your own words.)
 
 	-- *Looking at frequency.* The first set of outputs are lists of the top Democratic and Republican bigrams by frequency.  Looking at these lists, how similar or different are the most-frequent bigrams used by members of the two parties?  Are there any generalizations you can make about the two parties, at least during this time period, based on this information? If yes, discuss. If you think the answer is no, clearly explain why. Support your answer with examples.
 		
