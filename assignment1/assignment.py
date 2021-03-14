@@ -25,7 +25,7 @@ from tqdm import tqdm
 # in the following format:
 #   '<party>TAB<text>'
 # where <party> and <text> refer to the elements of those names in the json.
-# Make sure to replace line-internal whitespace (newlines, tabs, etc.) in text with a space.
+# Make sure to replace line-internal whitespace (one or more newlines, tabs, spaces, etc.) in text with a single space.
 #
 # For information on how to read from a gzipped file, rather than uncompressing and reading, see
 # https://stackoverflow.com/questions/10566558/python-read-lines-from-compressed-text-files#30868178
@@ -68,7 +68,8 @@ def ngrams(tokens, n):
 
 def filter_punctuation_bigrams(ngrams):
     # Input: assume ngrams is a list of ['token1','token2'] bigrams
-    # Removes ngrams like ['today','.'] where either token is a punctuation character
+    # Removes ngrams like ['today','.'] where either token is a single punctuation character
+    # Note that this does not mean tokens that merely *contain* punctuation, e.g. "'s"
     # Returns list with the items that were not removed
     punct = string.punctuation
     return [ngram   for ngram in ngrams   if ngram[0] not in punct and ngram[1] not in punct]
