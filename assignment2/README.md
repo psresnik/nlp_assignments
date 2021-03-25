@@ -100,7 +100,7 @@ D. Fill in the table below.
 | -----------   | -------------- | -------------- | -------------  |
 | House         |                |                |         |
 | Senate        |                |                |         |
-
+| All        |                |                |         |
 
 ## Extra credit (up to 20%)
 
