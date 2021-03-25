@@ -107,13 +107,20 @@ D. Fill in the table below.
 
 See if you can change your code in a way that improves accuracy of logistic regression classification in the Senate by 2% or more. Here are some ideas for things to try.  You'll get at least partial extra credit for all reasonable effort that you report on in a thorough, thoughtful way.
 
-- Try balancing the training data so that the minority label is as well represented as the majority label.  One good way to do this would be to use the [imbalanced-learn package](http://glemaitre.github.io/imbalanced-learn/index.html), in particular [over-sampling](https://imbalanced-learn.org/stable/over_sampling.html) with naive random over-sampling or with SMOTE.
+
 - See whether documents or even features involving procedural language (e.g. "I yield back the balance of my time") are helping you or hurting performance and modify accordingly. The file `new_legis_proc_jargon_stopwords.txt` contains terms likely to be found in procedural language.
-- Try automatically identifying features that are likely to be useful, e.g. you could consider using a statistical method to find features that are strongly associated with one label or the other by computing statistics like the log-likelihood ratio ([code](https://github.com/tdunning/python-llr)) on the following contingency table:
+- Try balancing the training data so that the minority label is as well represented as the majority label.  One good way to do this would be to use the [imbalanced-learn package](http://glemaitre.github.io/imbalanced-learn/index.html), in particular [over-sampling](https://imbalanced-learn.org/stable/over_sampling.html) with naive random over-sampling or with SMOTE.
+- Try automatically identifying features that are particularly likely to be useful, e.g. you could consider using a statistical method to find features that are strongly associated with one label or the other in the training data by computing statistics like the log-likelihood ratio ([code](https://github.com/tdunning/python-llr)) for the following contingency table:
 
 	
 	|           |  Democrat  |  Republican  |
 	| ---       |  -------- |  ----------  |
-	|  feature      |  count(feature, Democrat) | count(feature, Republican) |
-	|  not feature  |  sum over f != feature [ count(f, Democrat) ] | sum over f != feature [ count(f, Republican) ]|
-- Perform error analysis: look at actual documents given high logistic-regression probability 
+	|  **feature**      |  count(feature, Democrat) | count(feature, Republican) |
+	| **not feature** |  sum over f != feature [ count(f, Democrat) ] | sum over f != feature [ count(f, Republican) ]|
+
+	Then you could modify your feature extraction to limit itself to useful features as a subset of the ones you extracted before.
+	
+- Perform error analysis: look at actual documents classified mistakenly with a strong probability from the classifier. Look at false positives separately from false negatives, and see if you can identify any likely properties of the text, or of your features that seem to be characteristically misleading. Talk about them, or, if you want to go truly end to end, modify your code to try to do better.
+
+	Now, of course, if you do this, you're improving your system based on looking at what happened on test data, which is cheating.  There are two things you could do here to avoid that.  One is to do a train/devtest/test split for the whole first round above.  That is, instead of 70% train, 30% test, you could, for example, do 70% train, 15% devtest, 15% held-out test. (Do a 70-30 split and divide the latter in half randomly.) You would do everything, all the way up to and including error analysis and modifying your code, on the 70% train/15% *devtest* split, holding the remaining 15% test set out, unexamined, until the very end.  After you've gotten your code doing the very best you can via error analysis and everything else, evaluation performance of (a) the scikit-learn version, (b) your original code, and (c) your improved code, all on the true 15% test data.
+
