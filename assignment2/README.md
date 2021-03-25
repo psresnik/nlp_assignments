@@ -6,6 +6,7 @@ You will build a simple logistic regression classifier using scikit-learn that t
 
 Specifically:
 
+- You'll be working with the code in `assignment1.py`.  Note that `assignment1_fns.py` contains some of the functions from assignment 1 in case you prefer them to your own (or had trouble writing them correctly).
 - You'll make a small modification to the `read_and_clean_lines` function from assignment 1 so that it's returning not only a list of the documents, like before, but also a corresponding list of the labels for those documents ('Democrat' or 'Republican'). 
 - You'll split these documents and labels into training set and a held-out test set, using a 70/30 split.  You're going to use scikit-learn's `train_test_split` function for this in function `split_training_set`. It's a one-line call, and in a comment in the code we're pointing you to a tutorial example of how to do it.
 - You'll transform the raw text of speeches (the 'documents') into features in `convert_lines_to_feature_strings`.  This is basically the same extraction of unigrams and bigrams you did in assignment 1 for purposes of counting things, except now for each document you're representing that document as a whitespace-separated string of the unigrams and bigrams you found in it.
@@ -31,7 +32,7 @@ Training set label counts: Counter({'Republican': 2126, 'Democrat': 1048})
 Test set     label counts: Counter({'Republican': 912, 'Democrat': 449})
 ```
 
-- Before you go further, you can run `python model.py --use_sklearn_features` and the program will run end to end using its own built-in unigram and bigram tokenization in scikit-learn's CountVectorizer (see [here](https://medium.com/swlh/understanding-count-vectorizer-5dd71530c1b) for a nice tutorial discussion).  
+- Before you go further, you can run `python assignment.py --use_sklearn_features` and the program will run end to end using its own built-in unigram and bigram tokenization in scikit-learn's CountVectorizer (see [here](https://medium.com/swlh/understanding-count-vectorizer-5dd71530c1b) for a nice tutorial discussion).  
 
 - Once `convert_lines_to_feature_strings` is working you should see results like the following:
 
