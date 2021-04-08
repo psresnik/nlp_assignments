@@ -30,11 +30,6 @@ stopwords_file     = "./mallet_en_stoplist.txt"
 # rather than just returning a list of cleaned lines of text, we should return
 # returns two lists (of the same length): the cleaned lines and the party of the person who was speaking
 #
-# Read in congressional speeches jsonlines, i.e. a file with one well formed json element per line.
-# Limiting to just speeches where the chamber was the Senate, return a list of strings
-# in the following format:
-#   '<party>TAB<text>'
-# where <party> and <text> refer to the elements of those names in the json.
 # Make sure to replace line-internal whitespace (newlines, tabs, etc.) in text with a space.
 #
 # For information on how to read from a gzipped file, rather than uncompressing and reading, see
