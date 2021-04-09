@@ -51,22 +51,22 @@ def cky_by_length_and_start(wordstring):
   n     = len(words)
 
   print("CKY with control structure in the Wikipedia entry at https://en.wikipedia.org/wiki/CYK_algorithm")
-  print("Cell [l,i] means span of length=l starting at position i\n")
+  print("Cell [l,i] means span of length len=l starting at position i\n")
 
   # for j from 1 to length(words)
   for s in range(1,len(words)+1):
-      print("Initializing length 1 spans (row numbered 1 in table), cell [start={},length={}], i.e. {}".format(s-1,s,span(words,s-1,s)))
+      print("Looking for A's to put in cell [len={},start={}], i.e. {}".format(1,s-1,span(words,s-1,s)))
 
   # for each l = 2 to n -- Length of span
   for l in range(2,len(words)+1):
       print("Building spans of length {} (row numbered {} in table)".format(l,l))
       # for each s = 1 to n-l+1 -- Start of span
       for i in range(0,n-l+1):
-          print("  Working on cell [start={},length={}], i.e. {}".format(i,l,span(words,i,i+l)))
+          print("  Looking for A's to put in cell [len={},start={}], i.e. {}".format(l,i,span(words,i,i+l)))
           # for each p = 1 to l-1 -- Partition of span
           for p in range(1,l-1+1):
               print("    Considering partition with p={} (split after {} word in the span), for combining B in [len={},start={}]  with C in [len={},start={}], i.e. {} + {}".format(p,ordinal(p),p,i,l-p,i+p,span(words,i,i+p),span(words,i+p,i+l)))
-  print("Checking for an S in cell [{},{}]".format(0,n))
+  print("Checking for an S in cell [len={},start={}]".format(n,0))
 
 
 
