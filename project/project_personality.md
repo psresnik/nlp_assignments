@@ -71,5 +71,6 @@ The above steps are expected, and should be feasible for a typical group to do, 
 
 	Note that this is a step beyond what you've done in the assignments.  Up to this point you've taken a single dataset `(X,y)`, broken it into `(X_train,y_train,X_test,y_test)` and/or run cross-validation. Now in addition to that, you need to read a *new* dataset, preprocess it and do feature extraction the same way (e.g. using the same vectorizer for the first dataset), and use your trained model to make predictions, and then evaluate.
 
+- **Submission** Again, we expect a comprehensive writeup in a `writeup.pdf` detailing what you did and how you conducted your evaluation, along with the code used, and specific instructions on how to run it to build and train your model, etc. This is so that if need be, we could *reproduce* your experiments and get the same results. So please make this as nice and clean as possible, and to keep this in mind at the very beginning, so that iteration can be easier on your part as well!
 
 **Have fun!**
