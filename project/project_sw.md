@@ -2,7 +2,7 @@
 
 ### Overview
 
-*Please start by reading through Project option 1. What you have here is basically the same project, with the same requirements, but but doing the work on a different dataset/classification problem that you might find compelling or interesting.*
+*Please start by reading through [Project option 1](project_personality.md). What you have here is basically the same project, with the same requirements, but but doing the work on a different dataset/classification problem that you might find compelling or interesting. Therefore you should consider the instructions there to be the overview for this project also.  Let us know if you find antyhing confusing or unclear.*
 
 ### Caution
 

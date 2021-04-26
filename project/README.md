@@ -1,8 +1,5 @@
 ## Project overview
 
-***THIS PROJECT DESCRIPTION IS TENTATIVE. IT IS A GOOD THING TO READ THROUGH TO GET A SENSE OF WHAT THE PROJECT IS LIKELY TO BE LIKE, BUT THERE COULD STILL BE CHANGES. WE WILL LET YOU KNOW WHEN THE PROJECT PLANS ARE FINALIZED.***
-
---
 
 
 **Groups.** You will be forming project groups of 3-4 people. If you are having trouble finding a group, let me know ASAP, and I will try to help put people together. 
